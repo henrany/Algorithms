@@ -20,7 +20,7 @@ vector<T> selectionSort(vector<T> selection){
 }
 
 int main(){
-    vector<int> select {9,8,7,6,5,4,3,2,1,3,3,3,3,3};
+    vector<int> select {9,8,7,6,5,4,3,2,1,3,3,3,3};
     for(auto &i:selectionSort(select)){
         cout<<i<<" ";
     }
