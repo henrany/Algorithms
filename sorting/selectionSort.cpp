@@ -6,13 +6,13 @@ template<typename T>
 
 vector<T> selectionSort(vector<T> selection){
     T temp;
-    for(int i=0;i<selection.size();i++){
+    for(int i=0;i<selection.size()-1;i++){
         T min = i;
-        for(int j=min;j<selection.size()-1;j++){
-            if(selection[j] > selection[j+1]){
-                temp = selection[min];
-                selection[min] = selection[j+1];
-                selection[j+1] = temp; 
+        for(int j=min+1;j<selection.size();j++){
+            if(selection[j] < selection[min]){
+                temp = selection[j];
+                selection[j] = selection[min];
+                selection[min] = temp; 
             }
         }
     }
@@ -20,7 +20,7 @@ vector<T> selectionSort(vector<T> selection){
 }
 
 int main(){
-    vector<int> select {9,8,7,6,5,4,3,2,1,3,3,3,3};
+    vector<int> select {50,50,50,3,3,3,4,5,6,3,2,4,6,3,12,6,6,4,};
     for(auto &i:selectionSort(select)){
         cout<<i<<" ";
     }
