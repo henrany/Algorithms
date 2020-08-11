@@ -14,11 +14,22 @@ void populate(int n) {
 }
 
 //function to add the edges to the array
+//this is for directed graph;
 void add_edge(int n) {
     for (int i=0;i<n;i++) {
         int a=0, b=0;
         cin>>a>>b;
         vect[a][b] = 1;
+    }
+}
+
+//adding edge to be used in case of an undirected graph
+void add_edge_undirected_graph(int n){
+    for(int i=0;i<n;i++){
+        int a=0,b=0;
+        cin>>a>>b;
+        vect[a][b]= 1;
+        vect[b][a] = 1;
     }
 }
 
