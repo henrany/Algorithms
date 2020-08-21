@@ -1,7 +1,8 @@
 #include<bits/stdc++.h>
+#define max 1000000
 //implementation of the adjacency list of graph using stls
 
-std::list<int> adjacencyList[];
+std::list<int> adjacencyList[max];
 
 //adding vertices and edges to the list
 void add_edge(int numOfVertices){
@@ -15,7 +16,7 @@ void add_edge(int numOfVertices){
 
 //display the list
 void displayGraph(int numOfVertices){
-    for(int i=0;i<numOfVertices;i++){
+    for(int i=1;i<numOfVertices;i++){
         std::cout<<"vertex "<<i;
         for(auto a : adjacencyList[i]){
             std::cout<<"-->"<<a;
