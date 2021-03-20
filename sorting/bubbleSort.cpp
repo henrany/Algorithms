@@ -18,11 +18,11 @@ vector<T> bubbleSort(vector<T> bubble){
     return bubble;
 }
 
-int main(){
-    vector<int> bubble {1,3,8,2,9,2,5,6};
-    cout<<"[ ";
-    for(auto &i:bubbleSort(bubble)){
-        cout<<i<<" ";
-    }
-    cout<<" ]\n";
-}
+// int main(){
+//     vector<int> bubble {1,3,8,2,9,2,5,6};
+//     cout<<"[ ";
+//     for(auto &i:bubbleSort(bubble)){
+//         cout<<i<<" ";
+//     }
+//     cout<<" ]\n";
+// }

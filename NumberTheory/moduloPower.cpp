@@ -9,13 +9,3 @@ int modpow(int n, int expo, int m){
     if(expo%2 == 1) u = (u*n)%m;
     return u;
 }
-
-int main(){
-    int test;
-    cin>>test;
-    while(test--){
-        int number,exponent,mod;
-        cin>>number>>exponent>>mod;
-        cout<<modpow(number,exponent,mod)<<"\n";
-    }
-}

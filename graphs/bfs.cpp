@@ -16,6 +16,8 @@ class Graph{
       void add_edge(int src, int dest);
       //bfs algorithm with the starting vertice as s
       void bfs(int s);
+      void print();
+      ~Graph();
 };
 
 Graph::Graph(int vertices){
@@ -41,6 +43,7 @@ void Graph::bfs(int s){
 
     //initialized the start vertices as true in visited array
     visited[s] = true;
+    std::vector<int> parent;
     //check if the queue is not empty
     //if empty , the algorigthm will hault
     while(!qb.empty()){
@@ -49,18 +52,31 @@ void Graph::bfs(int s){
         std::cout<<currVertice<<" ";
         //remove first element from the queue
         qb.pop();
-        std::list<int>::iterator i;
-        for(i=adjList[currVertice].begin();i != adjList[currVertice].end();i++){
+        for(auto i=adjList[currVertice].begin();i != adjList[currVertice].end();i++){
             //not to process seen vertices
             if(!visited[*i]){
                 visited[*i] = true;
                 qb.push(*i);
+                parent.push_back(currVertice);
             }
         }
     } 
     std::cout<<"\n";
 }
 
+void Graph::print(){
+    for(int i = 0;i<numOfVertices;i++){
+        for(auto j=adjList[i].begin();j!=adjList[i].end();j++){
+            std::cout<<*j<<"->";
+        }
+        std::cout<<"\n";
+    }
+}
+
+Graph::~Graph(){
+    delete[] adjList;
+    delete[] visited;
+}
 
 int main(){
     Graph g(4);
@@ -70,6 +86,6 @@ int main(){
   g.add_edge(2, 0);
   g.add_edge(2, 3);
   g.add_edge(3, 3);
-
+  g.print();
   g.bfs(2);
 }

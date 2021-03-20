@@ -18,11 +18,3 @@ vector<T> selectionSort(vector<T> selection){
     }
     return selection;
 }
-
-int main(){
-    vector<int> select {50,50,50,3,3,3,4,5,6,3,2,4,6,3,12,6,6,4,};
-    for(auto &i:selectionSort(select)){
-        cout<<i<<" ";
-    }
-    cout<<"\n";
-}

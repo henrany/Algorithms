@@ -10,7 +10,7 @@ namespace search{
         for(int i=0;i<l.size();i++){
             if(l[i] == value){
                 found = true;
-                cout<<i<<"\n";
+                //cout<<i<<"\n";
             }
         }
         return found;
@@ -27,7 +27,7 @@ namespace search{
             int k = (a+b)/2;
             if(l[k] == value){
                 found = true;
-                cout<<k<<"\n";
+                //cout<<k<<"\n";
                 break;
             }
             else if(l[k] > value){
@@ -50,17 +50,17 @@ namespace search{
         }
         if(l[k] == value){
             found = true;
-            cout<<k<<"\n";
+            //cout<<k<<"\n";
         }
         return found;
     }
 }
 
-int main(){
-    vector<int> numbers{3,4,6,2,8,5,9,1,7};
-    vector<double> dec{1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,2.0};
-    cout<<search::linearSearch(numbers,8)<<"\n";
-    cout<<search::binarySearch(dec,2.0)<<"\n";
-    cout<<search::jumpSearch(dec,1.7)<<"\n";
-    return 0;
-}
+// int main(){
+//     vector<int> numbers {3,4,6,2,8,5,9,1,7};
+//     vector<double> dec {1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,2.0};
+//     cout<<search::linearSearch(numbers,10)<<"\n";
+//     cout<<search::binarySearch(dec,2.0)<<"\n";
+//     cout<<search::jumpSearch(dec,1.7)<<"\n";
+//     return 0;
+// }
